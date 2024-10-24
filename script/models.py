@@ -50,7 +50,7 @@ def train_random_forest(X_train, y_train, X_test, y_test):
     model.fit(X_train, y_train)
     predictions = model.predict(X_test)
     accuracy = accuracy_score(y_test, predictions)
-    return accuracy
+    return accuracy,model
 
 # Function to train and evaluate Decision Tree
 def train_decision_tree(X_train, y_train, X_test, y_test):
@@ -58,4 +58,4 @@ def train_decision_tree(X_train, y_train, X_test, y_test):
     model.fit(X_train, y_train)
     predictions = model.predict(X_test)
     accuracy = accuracy_score(y_test, predictions)
-    return accuracy
+    return accuracy,model
